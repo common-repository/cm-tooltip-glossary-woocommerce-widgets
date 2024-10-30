@@ -1,0 +1,27 @@
+
+.cmtt-woocommerce-product-container{
+    padding: 10px;
+    padding: 0.2em;
+}
+.cmtt-woocommerce-product-image-container{
+    float: left;
+    padding: 5px 10px 10px 0px;
+}
+.cmtt-woocommerce-product-description{
+    padding-bottom: 10px;
+    padding-bottom: 1em;
+    display: block;
+}
+.cmtt-woocommerce-product-desc-container {
+    min-width: 275px;
+}
+.cmtt-woocommerce-product-name {
+    font-weight: 600;
+}
+
+.cmtt-woocommerce-product-button-container{
+    float: right;
+}
+.cmtt-woocommerce-product-price ins{
+    background: none;
+}

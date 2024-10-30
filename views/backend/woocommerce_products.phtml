@@ -1,0 +1,18 @@
+<?php
+$products = self::getAllProducts();
+$productFactory = new WC_Product_Factory;
+?>
+
+<label>Woocommerce ProductID<input type="text" placeholder="ProductID" name="<?php echo $selectName ?>" value="<?php echo $selectedValue ?>" /></label>
+
+<!--<select name="<?php echo $selectName ?>" >
+    <option value="0" <?php selected('0', $selectedValue); ?> >Please choose the product</option>
+    <?php
+//    foreach($products as $product)
+//    {
+//        $wooProduct = $productFactory->get_product($product->ID);
+//        $value = $wooProduct->post->ID;
+//        echo '<option value="' . $value . '" ' . selected($value, $selectedValue, true) . '>' . $wooProduct->post->post_title . '</option>';
+//    }
+    ?>
+</select>-->

@@ -1,0 +1,32 @@
+<?php
+$productFactory = new WC_Product_Factory();
+$product = $productFactory->get_product($productId);
+
+
+if( is_object($product) && $product->exists() && $product->get_sku() )
+{
+    $image = str_replace('"', '\'', $product->get_image());
+    $sku = $product->get_sku();
+    $productName = $product->get_title();
+    $productPrice = str_replace('"', '\'', $product->get_price_html());
+    $productLink = get_permalink($productId);
+    $buyNowLink = $product->add_to_cart_url();
+    $productDescription = cminds_truncate($product->post->post_content, 200);
+    ?>
+
+    <div class='cmtt-woocommerce-product-container woocommerce'>
+        <div class='cmtt-woocommerce-product-image-container'>
+            <?php echo $image ?>
+        </div>
+        <div class='cmtt-woocommerce-product-desc-container'>
+            <span class=cmtt-woocommerce-product-name><?php echo $productName; ?></span>
+            <span class=cmtt-woocommerce-product-description><?php echo $productDescription; ?></span>
+            <span class=cmtt-woocommerce-product-button-container>
+                <a href='<?php echo $productLink; ?>' class='cmtt-woocommerce-product-more-info button'>More info</a>
+            </span>
+        </div>
+        <div class=clear></div>
+    </div>
+    <?php
+}
+?>

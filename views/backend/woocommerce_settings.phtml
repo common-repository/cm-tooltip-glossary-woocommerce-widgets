@@ -1,0 +1,22 @@
+<div class="block">
+    <h3>API - Woocommerce</h3>
+    <?php
+    $isWoocommerce = CMTooltipGlossaryWoocommerceSupportAPI::isWoocommerce();
+    ?>
+    <p>
+        Advertise Woocommerce products in your tooltips.
+        <?php if( !$isWoocommerce ) : ?>
+            <br/><strong>This feature requires installed and activated <a href="http://wordpress.org/plugins/woocommerce/" target="_blank">WooCommerce plugin</a>.</strong>
+        <?php endif; ?>
+    </p>
+    <p>
+        To show a product informations in term tooltip - edit the term page and put the product ID in the metabox "CM Tooltip - Woocommerce" and update the page.
+    </p>
+<!--    <table class="form-table">
+        <tr valign="top">
+            <th scope="row" valign="middle" align="left" >Enable Woocommerce:</th>
+            <td><input type="checkbox" <?php disabled(false, $isWoocommerce); ?> name="cmtt_tooltip3RD_WoocommerceEnabled" <?php checked(1, get_option('cmtt_tooltip3RD_WoocommerceEnabled')); ?> value="1" /></td>
+            <td colspan="2" class="cmtt_field_help_container">Enable Woocommerce products advertising<br><br></td>
+        </tr>
+    </table>-->
+</div>
